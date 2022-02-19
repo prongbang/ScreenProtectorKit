@@ -56,7 +56,7 @@ class AppDelegate: FlutterAppDelegate {
     private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
 
     override func applicationDidBecomeActive(_ application: UIApplication) {
-            screenProtectorKit.disableBlurScreen()
+        screenProtectorKit.disableBlurScreen()
     }
 
     override func applicationWillResignActive(_ application: UIApplication) {
@@ -76,7 +76,7 @@ class AppDelegate: FlutterAppDelegate {
     private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
 
     override func applicationDidBecomeActive(_ application: UIApplication) {
-            screenProtectorKit.disableImageScreen()
+        screenProtectorKit.disableImageScreen()
     }
 
     override func applicationWillResignActive(_ application: UIApplication) {
