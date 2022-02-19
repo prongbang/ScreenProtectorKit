@@ -2,6 +2,12 @@
 
 Safe Data Leakage via Application Background Screenshot and Prevent Screenshot for iOS.
 
+## CocoaPods
+
+```shell
+pod 'ScreenProtectorKit'
+```
+
 ## Swift Package Manager
 
 In your `Package.swift` file, add `ScreenProtectorKit` dependency to corresponding targets:
@@ -9,7 +15,7 @@ In your `Package.swift` file, add `ScreenProtectorKit` dependency to correspondi
 ```swift
 let package = Package(
   dependencies: [
-    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.0"),
+    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.1"),
   ],
 )
 ```
