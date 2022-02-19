@@ -22,7 +22,7 @@ public class ScreenProtectorKit {
     private var screenBlur: UIView? = nil
     private var screenPrevent = UITextField()
     
-    init(window: UIWindow?) {
+    public init(window: UIWindow?) {
         self.window = window
     }
     
@@ -37,7 +37,7 @@ public class ScreenProtectorKit {
     //
     //      return true
     //  }
-    func configurePreventionScreenshot() {
+    public func configurePreventionScreenshot() {
         guard let w = window else { return }
         
         if (!w.subviews.contains(screenPrevent)) {
@@ -54,7 +54,7 @@ public class ScreenProtectorKit {
     // override func applicationDidBecomeActive(_ application: UIApplication) {
     //     screenProtectorKit.enabledPreventScreenshot()
     // }
-    func enabledPreventScreenshot() {
+    public func enabledPreventScreenshot() {
         screenPrevent.isSecureTextEntry = true
     }
     
@@ -63,7 +63,7 @@ public class ScreenProtectorKit {
     // override func applicationWillResignActive(_ application: UIApplication) {
     //     screenProtectorKit.disablePreventScreenshot()
     // }
-    func disablePreventScreenshot() {
+    public func disablePreventScreenshot() {
         screenPrevent.isSecureTextEntry = false
     }
     
@@ -72,7 +72,7 @@ public class ScreenProtectorKit {
     // override func applicationWillResignActive(_ application: UIApplication) {
     //     screenProtectorKit.enabledBlurScreen()
     // }
-    func enabledBlurScreen(style: UIBlurEffect.Style = UIBlurEffect.Style.light) {
+    public func enabledBlurScreen(style: UIBlurEffect.Style = UIBlurEffect.Style.light) {
         screenBlur = UIScreen.main.snapshotView(afterScreenUpdates: false)
         let blurEffect = UIBlurEffect(style: style)
         let blurBackground = UIVisualEffectView(effect: blurEffect)
@@ -86,7 +86,7 @@ public class ScreenProtectorKit {
     // override func applicationDidBecomeActive(_ application: UIApplication) {
     //     screenProtectorKit.disableBlurScreen()
     // }
-    func disableBlurScreen() {
+    public func disableBlurScreen() {
         screenBlur?.removeFromSuperview()
         screenBlur = nil
     }
@@ -96,7 +96,7 @@ public class ScreenProtectorKit {
     // override func applicationWillResignActive(_ application: UIApplication) {
     //     screenProtectorKit.enabledImageScreen(named: "LaunchImage")
     // }
-    func enabledImageScreen(named: String) {
+    public func enabledImageScreen(named: String) {
         screenImage = UIImageView(frame: UIScreen.main.bounds)
         screenImage?.image = UIImage(named: named)
         screenImage?.isUserInteractionEnabled = false
@@ -110,7 +110,7 @@ public class ScreenProtectorKit {
     // override func applicationDidBecomeActive(_ application: UIApplication) {
     //     screenProtectorKit.disableImageScreen()
     // }
-    func disableImageScreen() {
+    public func disableImageScreen() {
         screenImage?.removeFromSuperview()
         screenImage = nil
     }

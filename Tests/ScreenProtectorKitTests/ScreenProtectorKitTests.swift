@@ -6,6 +6,7 @@ final class ScreenProtectorKitTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(ScreenProtectorKit().text, "Hello, World!")
+        let screenProtectorKit = ScreenProtectorKit(window: nil)
+        XCTAssertEqual(screenProtectorKit != nil, true)
     }
 }

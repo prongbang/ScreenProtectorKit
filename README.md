@@ -15,7 +15,7 @@ In your `Package.swift` file, add `ScreenProtectorKit` dependency to correspondi
 ```swift
 let package = Package(
   dependencies: [
-    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.2"),
+    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.3"),
   ],
 )
 ```
