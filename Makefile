@@ -4,7 +4,7 @@ podspec_create:
 
 # make podspec_lint
 podspec_lint:
-	pod spec lint ScreenProtectorKit.podspec --allow-warnings
+	pod spec lint ScreenProtectorKit.podspec
 
 # make podspec_register email=dev.m@gmail.com name=prongbang
 podspec_register:

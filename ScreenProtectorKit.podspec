@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
     s.platform         = :ios, "12.0"
     s.swift_version    = "5.0"
     s.module_name      = "ScreenProtectorKit"
-    s.source_files     = 'Source/**/*'
+    s.source_files     = "Sources", "Sources/**/*.{h,m,swift}"
 end
