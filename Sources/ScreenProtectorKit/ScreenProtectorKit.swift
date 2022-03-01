@@ -101,7 +101,7 @@ public class ScreenProtectorKit {
         guard let w = window else { return }
         screenColor = UIView(frame: w.bounds)
         guard let view = screenColor else { return }
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(hexString: hexColor)
         w.addSubview(view)
     }
     
