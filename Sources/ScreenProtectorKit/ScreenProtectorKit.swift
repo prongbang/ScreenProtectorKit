@@ -20,6 +20,7 @@ public class ScreenProtectorKit {
     private var window: UIWindow? = nil
     private var screenImage: UIImageView? = nil
     private var screenBlur: UIView? = nil
+    private var screenColor: UIView? = nil
     private var screenPrevent = UITextField()
     
     public init(window: UIWindow?) {
@@ -89,6 +90,29 @@ public class ScreenProtectorKit {
     public func disableBlurScreen() {
         screenBlur?.removeFromSuperview()
         screenBlur = nil
+    }
+    
+    // How to used:
+    //
+    // override func applicationWillResignActive(_ application: UIApplication) {
+    //     screenProtectorKit.enabledColorScreen(hexColor: "#ffffff")
+    // }
+    public func enabledColorScreen(hexColor: String) {
+        guard let w = window else { return }
+        screenColor = UIView(frame: w.bounds)
+        guard let view = screenColor else { return }
+        view.backgroundColor = UIColor.white
+        w.addSubview(view)
+    }
+    
+    // How to used:
+    //
+    // override func applicationDidBecomeActive(_ application: UIApplication) {
+    //     screenProtectorKit.disableColorScreen()
+    // }
+    public func disableColorScreen() {
+        screenColor?.removeFromSuperview()
+        screenColor = nil
     }
     
     // How to used:

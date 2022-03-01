@@ -15,7 +15,7 @@ In your `Package.swift` file, add `ScreenProtectorKit` dependency to correspondi
 ```swift
 let package = Package(
   dependencies: [
-    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.5"),
+    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.0.6"),
   ],
 )
 ```
@@ -87,6 +87,26 @@ class AppDelegate: FlutterAppDelegate {
 
     override func applicationWillResignActive(_ application: UIApplication) {
         screenProtectorKit.enabledImageScreen(named: "LaunchImage")
+    }
+    
+}
+```
+
+### Color Background Screenshot
+
+```swift
+import ScreenProtectorKit
+
+class AppDelegate: FlutterAppDelegate {
+
+    private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
+
+    override func applicationDidBecomeActive(_ application: UIApplication) {
+        screenProtectorKit.disableColorScreen()
+    }
+
+    override func applicationWillResignActive(_ application: UIApplication) {
+        screenProtectorKit.enabledColorScreen(hexColor: "#ffffff")
     }
     
 }
