@@ -22,6 +22,8 @@ public class ScreenProtectorKit {
     private var screenBlur: UIView? = nil
     private var screenColor: UIView? = nil
     private var screenPrevent = UITextField()
+    private var screenshotObserve: NSObjectProtocol? = nil
+    private var screenRecordObserve: NSObjectProtocol? = nil
     
     public init(window: UIWindow?) {
         self.window = window
@@ -137,5 +139,76 @@ public class ScreenProtectorKit {
     public func disableImageScreen() {
         screenImage?.removeFromSuperview()
         screenImage = nil
+    }
+    
+    // How to used:
+    //
+    // screenProtectorKit.removeObserver(observer: screenRecordObserve)
+    public func removeObserver(observer: NSObjectProtocol?) {
+        guard let obs = observer else {return}
+        NotificationCenter.default.removeObserver(obs)
+    }
+    
+    // How to used:
+    //
+    // screenProtectorKit.removeScreenshotObserver()
+    public func removeScreenshotObserver() {
+        if screenshotObserve != nil {
+            self.removeObserver(observer: screenshotObserve)
+            self.screenshotObserve = nil
+        }
+    }
+    
+    // How to used:
+    //
+    // screenProtectorKit.removeScreenRecordObserver()
+    public func removeScreenRecordObserver() {
+        if screenRecordObserve != nil {
+            self.removeObserver(observer: screenRecordObserve)
+            self.screenRecordObserve = nil
+        }
+    }
+    
+    // How to used:
+    //
+    // screenProtectorKit.removeAllObserver()
+    public func removeAllObserver() {
+        self.removeScreenshotObserver()
+        self.removeScreenRecordObserver()
+    }
+    
+    // How to used:
+    //
+    // screenProtectorKit.screenshotObserver {
+    //      // Callback on Screenshot
+    // }
+    public func screenshotObserver(using onScreenshot: @escaping () -> Void) {
+        screenshotObserve = NotificationCenter.default.addObserver(
+            forName: UIApplication.userDidTakeScreenshotNotification,
+            object: nil,
+            queue: OperationQueue.main
+        ) { notification in
+            onScreenshot()
+        }
+    }
+    
+    // How to used:
+    //
+    // if #available(iOS 11.0, *) {
+    //     screenProtectorKit.screenRecordObserver { isCaptured in
+    //         // Callback on Screen Record
+    //     }
+    // }
+    @available(iOS 11.0, *)
+    public func screenRecordObserver(using onScreenRecord: @escaping (Bool) -> Void) {
+        screenRecordObserve =
+        NotificationCenter.default.addObserver(
+            forName: UIScreen.capturedDidChangeNotification,
+            object: nil,
+            queue: OperationQueue.main
+        ) { notification in
+            let isCaptured = UIScreen.main.isCaptured
+            onScreenRecord(isCaptured)
+        }
     }
 }
