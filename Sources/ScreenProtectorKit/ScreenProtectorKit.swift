@@ -211,4 +211,14 @@ public class ScreenProtectorKit {
             onScreenRecord(isCaptured)
         }
     }
+    
+    // How to used:
+    //
+    // if #available(iOS 11.0, *) {
+    //     screenProtectorKit.screenIsRecording()
+    // }
+    @available(iOS 11.0, *)
+    public func screenIsRecording() -> Bool {
+        return UIScreen.main.isCaptured
+    }
 }
