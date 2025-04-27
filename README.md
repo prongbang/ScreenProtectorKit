@@ -1,16 +1,43 @@
-# ScreenProtectorKit
+# ScreenProtectorKit 🛡️
 
-Safe Data Leakage via Application Background Screenshot and Prevent Screenshot for iOS.
+[![Swift](https://img.shields.io/badge/Swift-5.5+-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ScreenProtectorKit.svg)](https://cocoapods.org/pods/ScreenProtectorKit)
+[![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## CocoaPods
+> Secure your iOS app's sensitive data by preventing screenshots and protecting background app snapshots with ease.
 
-```shell
+## ✨ Features
+
+- 📸 **Screenshot Prevention** - Detect and handle screenshot attempts
+- 🖼️ **Custom Background Protection** - Replace app preview with custom content
+- 🎨 **Multiple Protection Styles**:
+  - Blur effect
+  - Custom image
+  - Solid color
+- 🎬 **Screen Recording Detection** - Know when screen is being recorded
+- 🚀 **Easy Integration** - Simple API with clear documentation
+- 📦 **Multiple Installation Options** - CocoaPods and Swift Package Manager support
+
+## 📦 Installation
+
+### CocoaPods
+
+Add to your `Podfile`:
+
+```ruby
 pod 'ScreenProtectorKit'
 ```
 
-## Swift Package Manager
+Then run:
+```bash
+pod install
+```
 
-In your `Package.swift` file, add `ScreenProtectorKit` dependency to corresponding targets:
+### Swift Package Manager
+
+Add to your `Package.swift`:
 
 ```swift
 let package = Package(
@@ -20,102 +47,184 @@ let package = Package(
 )
 ```
 
-## How to use
+Or via Xcode:
+1. File → Add Packages...
+2. Enter package URL: `https://github.com/prongbang/ScreenProtectorKit.git`
+3. Select version: `1.3.1` or later
 
-### Prevent Screenshot
+## 🚀 Quick Start
+
+### Basic Setup
 
 ```swift
 import ScreenProtectorKit
 
 class AppDelegate: FlutterAppDelegate {
-
-    private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
-
+    private lazy var screenProtectorKit = { 
+        return ScreenProtectorKit(window: window) 
+    }()
+    
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-    
+        // Configure screenshot prevention
         screenProtectorKit.configurePreventionScreenshot()
-    
         return true
     }
-
-    override func applicationDidBecomeActive(_ application: UIApplication) {
-        screenProtectorKit.enabledPreventScreenshot()
-    }
-
-    override func applicationWillResignActive(_ application: UIApplication) {
-        screenProtectorKit.disablePreventScreenshot()
-    }
-    
 }
 ```
 
-### Blur Background Screenshot
+## 📱 Protection Methods
+
+### 1. Screenshot Prevention
+
+Detect and respond to screenshot attempts:
+
+```swift
+override func applicationDidBecomeActive(_ application: UIApplication) {
+    screenProtectorKit.enabledPreventScreenshot()
+}
+
+override func applicationWillResignActive(_ application: UIApplication) {
+    screenProtectorKit.disablePreventScreenshot()
+}
+```
+
+### 2. Blur Background Protection
+
+Apply blur effect when app goes to background:
+
+```swift
+override func applicationDidBecomeActive(_ application: UIApplication) {
+    screenProtectorKit.disableBlurScreen()
+}
+
+override func applicationWillResignActive(_ application: UIApplication) {
+    screenProtectorKit.enabledBlurScreen()
+}
+```
+
+### 3. Image Background Protection
+
+Show custom image when app is in background:
+
+```swift
+override func applicationDidBecomeActive(_ application: UIApplication) {
+    screenProtectorKit.disableImageScreen()
+}
+
+override func applicationWillResignActive(_ application: UIApplication) {
+    screenProtectorKit.enabledImageScreen(named: "LaunchImage")
+}
+```
+
+### 4. Color Background Protection
+
+Display solid color when app is in background:
+
+```swift
+override func applicationDidBecomeActive(_ application: UIApplication) {
+    screenProtectorKit.disableColorScreen()
+}
+
+override func applicationWillResignActive(_ application: UIApplication) {
+    screenProtectorKit.enabledColorScreen(hexColor: "#ffffff")
+}
+```
+
+### 5. Screen Recording Detection
+
+Check if screen is being recorded:
+
+```swift
+let isRecording = screenProtectorKit.screenIsRecording()
+if isRecording {
+    // Handle screen recording scenario
+}
+```
+
+## 💡 Usage Examples
+
+### Complete Implementation
 
 ```swift
 import ScreenProtectorKit
 
 class AppDelegate: FlutterAppDelegate {
-
-    private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
-
+    private lazy var screenProtectorKit = { 
+        return ScreenProtectorKit(window: window) 
+    }()
+    
+    override func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        // Setup screenshot prevention
+        screenProtectorKit.configurePreventionScreenshot()
+        
+        // Handle screen recording if needed
+        if screenProtectorKit.screenIsRecording() {
+            showRecordingWarning()
+        }
+        
+        return true
+    }
+    
     override func applicationDidBecomeActive(_ application: UIApplication) {
+        // Enable screenshot prevention
+        screenProtectorKit.enabledPreventScreenshot()
+        
+        // Remove protection overlay
         screenProtectorKit.disableBlurScreen()
     }
-
+    
     override func applicationWillResignActive(_ application: UIApplication) {
+        // Disable screenshot prevention
+        screenProtectorKit.disablePreventScreenshot()
+        
+        // Add protection overlay
         screenProtectorKit.enabledBlurScreen()
     }
     
+    private func showRecordingWarning() {
+        // Show alert to user about screen recording
+    }
 }
 ```
 
-### Image Background Screenshot
+## ⚠️ Important Notes
 
-```swift
-import ScreenProtectorKit
+- Screenshot prevention on iOS works by detecting attempts, not blocking them entirely
+- Background protection helps prevent data leaks in app switcher
+- Screen recording detection only indicates if recording is in progress
+- Test thoroughly across different iOS versions and devices
 
-class AppDelegate: FlutterAppDelegate {
+## 🔧 Requirements
 
-    private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
+- iOS 13.0+
+- Swift 5.5+
+- Xcode 13.0+
 
-    override func applicationDidBecomeActive(_ application: UIApplication) {
-        screenProtectorKit.disableImageScreen()
-    }
+## 🤝 Contributing
 
-    override func applicationWillResignActive(_ application: UIApplication) {
-        screenProtectorKit.enabledImageScreen(named: "LaunchImage")
-    }
-    
-}
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Color Background Screenshot
+## 📄 License
 
-```swift
-import ScreenProtectorKit
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-class AppDelegate: FlutterAppDelegate {
 
-    private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
+## 💖 Support the Project
 
-    override func applicationDidBecomeActive(_ application: UIApplication) {
-        screenProtectorKit.disableColorScreen()
-    }
+If you find this package helpful, please consider supporting it:
 
-    override func applicationWillResignActive(_ application: UIApplication) {
-        screenProtectorKit.enabledColorScreen(hexColor: "#ffffff")
-    }
-    
-}
-```
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/prongbang)
 
-### Check screen recording
+## 🔗 Links
 
-```swift
-import ScreenProtectorKit
+- [Documentation](https://github.com/prongbang/ScreenProtectorKit/wiki)
+- [Example Project](https://github.com/prongbang/ScreenProtectorKit/tree/main/Example)
+- [Report Issues](https://github.com/prongbang/ScreenProtectorKit/issues)
 
-let isRecording = screenProtectorKit.screenIsRecording()
-```
+---
