@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'ScreenProtectorKit'
-    s.version          = '1.3.1'
+    s.version          = '1.4.0'
     s.summary          = 'Safe Data Leakage via Application Background Screenshot and Prevent Screenshot for iOS.'
     s.homepage         = 'https://github.com/prongbang/ScreenProtectorKit'
     s.license          = 'MIT'
