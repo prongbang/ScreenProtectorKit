@@ -42,7 +42,7 @@ Add to your `Package.swift`:
 ```swift
 let package = Package(
   dependencies: [
-    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.3.1"),
+    .package(url: "https://github.com/prongbang/ScreenProtectorKit.git", from: "1.4.0"),
   ],
 )
 ```
@@ -50,7 +50,7 @@ let package = Package(
 Or via Xcode:
 1. File → Add Packages...
 2. Enter package URL: `https://github.com/prongbang/ScreenProtectorKit.git`
-3. Select version: `1.3.1` or later
+3. Select version: `1.4.0` or later
 
 ## 🚀 Quick Start
 
@@ -202,7 +202,7 @@ class AppDelegate: FlutterAppDelegate {
 
 ## 🔧 Requirements
 
-- iOS 13.0+
+- iOS 11.0+
 - Swift 5.5+
 - Xcode 13.0+
 
@@ -223,8 +223,6 @@ If you find this package helpful, please consider supporting it:
 
 ## 🔗 Links
 
-- [Documentation](https://github.com/prongbang/ScreenProtectorKit/wiki)
-- [Example Project](https://github.com/prongbang/ScreenProtectorKit/tree/main/Example)
 - [Report Issues](https://github.com/prongbang/ScreenProtectorKit/issues)
 
 ---
