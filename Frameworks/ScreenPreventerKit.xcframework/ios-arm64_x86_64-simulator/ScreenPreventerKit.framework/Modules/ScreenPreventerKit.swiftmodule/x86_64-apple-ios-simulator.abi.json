@@ -1,0 +1,2155 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ScreenPreventerKit",
+    "printedName": "ScreenPreventerKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenPreventable",
+        "printedName": "ScreenPreventable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "screenIsRecording",
+            "printedName": "screenIsRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP17screenIsRecordingSbyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP17screenIsRecordingSbyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "screenRecordObserver",
+            "printedName": "screenRecordObserver(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP20screenRecordObserver5usingyySbc_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP20screenRecordObserver5usingyySbc_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "screenshotObserver",
+            "printedName": "screenshotObserver(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP18screenshotObserver5usingyyyc_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP18screenshotObserver5usingyyyc_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAllObserver",
+            "printedName": "removeAllObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP17removeAllObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP17removeAllObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeScreenRecordObserver",
+            "printedName": "removeScreenRecordObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP06removeA14RecordObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP06removeA14RecordObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeScreenshotObserver",
+            "printedName": "removeScreenshotObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP24removeScreenshotObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP24removeScreenshotObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeObserver",
+            "printedName": "removeObserver(observer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ObjectiveC.NSObjectProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObjectProtocol",
+                    "printedName": "any ObjectiveC.NSObjectProtocol",
+                    "usr": "c:objc(pl)NSObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP14removeObserver8observerySo8NSObject_pSg_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP14removeObserver8observerySo8NSObject_pSg_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableImageScreen",
+            "printedName": "disableImageScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP012disableImageA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP012disableImageA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledImageScreen",
+            "printedName": "enabledImageScreen(named:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP012enabledImageA05namedySS_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP012enabledImageA05namedySS_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableColorScreen",
+            "printedName": "disableColorScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP012disableColorA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP012disableColorA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledColorScreen",
+            "printedName": "enabledColorScreen(hexColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP012enabledColorA003hexF0ySS_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP012enabledColorA003hexF0ySS_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBlurScreen",
+            "printedName": "disableBlurScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP011disableBlurA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP011disableBlurA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledBlurScreen",
+            "printedName": "enabledBlurScreen(style:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Style",
+                "printedName": "UIKit.UIBlurEffect.Style",
+                "usr": "c:@E@UIBlurEffectStyle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP011enabledBlurA05styleySo17UIBlurEffectStyleV_tF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP011enabledBlurA05styleySo17UIBlurEffectStyleV_tF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disablePreventScreenRecording",
+            "printedName": "disablePreventScreenRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP014disablePreventA9RecordingyyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP014disablePreventA9RecordingyyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disablePreventScreenshot",
+            "printedName": "disablePreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP24disablePreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP24disablePreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enablePreventScreenshot",
+            "printedName": "enablePreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP23enablePreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP23enablePreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenRecording",
+            "printedName": "enabledPreventScreenRecording(text:image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP014enabledPreventA9Recording4text5imageySSSg_AGtF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP014enabledPreventA9Recording4text5imageySSSg_AGtF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenshot",
+            "printedName": "enabledPreventScreenshot(text:image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP24enabledPreventScreenshot4text5imageySSSg_AGtF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP24enabledPreventScreenshot4text5imageySSSg_AGtF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledBlurScreen",
+            "printedName": "enabledBlurScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP011enabledBlurA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP011enabledBlurA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenshot",
+            "printedName": "enabledPreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP24enabledPreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP24enabledPreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenRecording",
+            "printedName": "enabledPreventScreenRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP014enabledPreventA9RecordingyyF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP014enabledPreventA9RecordingyyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setRootViewResolver",
+            "printedName": "setRootViewResolver(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenPreventerRootViewResolving",
+                "printedName": "any ScreenPreventerKit.ScreenPreventerRootViewResolving",
+                "usr": "s:18ScreenPreventerKit0aB17RootViewResolvingP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP19setRootViewResolveryyAA0abfG9Resolving_pF",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP19setRootViewResolveryyAA0abfG9Resolving_pF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventable>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18ScreenPreventerKit0A11PreventableP",
+        "mangledName": "$s18ScreenPreventerKit0A11PreventableP",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenPreventerRootViewResolving",
+        "printedName": "ScreenPreventerRootViewResolving",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "resolveRootView",
+            "printedName": "resolveRootView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB17RootViewResolvingP07resolvedE0So6UIViewCSgyF",
+            "mangledName": "$s18ScreenPreventerKit0aB17RootViewResolvingP07resolvedE0So6UIViewCSgyF",
+            "moduleName": "ScreenPreventerKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ScreenPreventerKit.ScreenPreventerRootViewResolving>",
+            "sugared_genericSig": "<Self where Self : ScreenPreventerKit.ScreenPreventerRootViewResolving>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18ScreenPreventerKit0aB17RootViewResolvingP",
+        "mangledName": "$s18ScreenPreventerKit0aB17RootViewResolvingP",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenPreventerMode",
+        "printedName": "ScreenPreventerMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScreenPreventerKit.ScreenPreventerMode.Type) -> ScreenPreventerKit.ScreenPreventerMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenPreventerMode",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                    "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18ScreenPreventerKit0aB4ModeO4noneyA2CmF",
+            "mangledName": "$s18ScreenPreventerKit0aB4ModeO4noneyA2CmF",
+            "moduleName": "ScreenPreventerKit"
+          },
+          {
+            "kind": "Var",
+            "name": "blur",
+            "printedName": "blur",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScreenPreventerKit.ScreenPreventerMode.Type) -> ScreenPreventerKit.ScreenPreventerMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScreenPreventerMode",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                    "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18ScreenPreventerKit0aB4ModeO4bluryA2CmF",
+            "mangledName": "$s18ScreenPreventerKit0aB4ModeO4bluryA2CmF",
+            "moduleName": "ScreenPreventerKit"
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScreenPreventerKit.ScreenPreventerMode.Type) -> (Swift.String) -> ScreenPreventerKit.ScreenPreventerMode",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ScreenPreventerKit.ScreenPreventerMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(name: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18ScreenPreventerKit0aB4ModeO5imageyACSS_tcACmF",
+            "mangledName": "$s18ScreenPreventerKit0aB4ModeO5imageyACSS_tcACmF",
+            "moduleName": "ScreenPreventerKit"
+          },
+          {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ScreenPreventerKit.ScreenPreventerMode.Type) -> (Swift.String) -> ScreenPreventerKit.ScreenPreventerMode",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ScreenPreventerKit.ScreenPreventerMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(hex: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ScreenPreventerKit.ScreenPreventerMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenPreventerMode",
+                        "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                        "usr": "s:18ScreenPreventerKit0aB4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18ScreenPreventerKit0aB4ModeO5coloryACSS_tcACmF",
+            "mangledName": "$s18ScreenPreventerKit0aB4ModeO5coloryACSS_tcACmF",
+            "moduleName": "ScreenPreventerKit"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenPreventerMode",
+                "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                "usr": "s:18ScreenPreventerKit0aB4ModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenPreventerMode",
+                "printedName": "ScreenPreventerKit.ScreenPreventerMode",
+                "usr": "s:18ScreenPreventerKit0aB4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB4ModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s18ScreenPreventerKit0aB4ModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "ScreenPreventerKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18ScreenPreventerKit0aB4ModeO",
+        "mangledName": "$s18ScreenPreventerKit0aB4ModeO",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenPreventer",
+        "printedName": "ScreenPreventer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "window",
+            "printedName": "window",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIWindow?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIWindow",
+                    "printedName": "UIKit.UIWindow",
+                    "usr": "c:objc(cs)UIWindow"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvp",
+            "mangledName": "$s18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvp",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIWindow?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIWindow",
+                        "printedName": "UIKit.UIWindow",
+                        "usr": "c:objc(cs)UIWindow"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvg",
+                "mangledName": "$s18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvg",
+                "moduleName": "ScreenPreventerKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIWindow?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIWindow",
+                        "printedName": "UIKit.UIWindow",
+                        "usr": "c:objc(cs)UIWindow"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvs",
+                "mangledName": "$s18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvs",
+                "moduleName": "ScreenPreventerKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvM",
+                "mangledName": "$s18ScreenPreventerKit0aB0C6windowSo8UIWindowCSgvM",
+                "moduleName": "ScreenPreventerKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(window:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenPreventer",
+                "printedName": "ScreenPreventerKit.ScreenPreventer",
+                "usr": "s:18ScreenPreventerKit0aB0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIWindow?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIWindow",
+                    "printedName": "UIKit.UIWindow",
+                    "usr": "c:objc(cs)UIWindow"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18ScreenPreventerKit0aB0C6windowACSo8UIWindowCSg_tcfc",
+            "mangledName": "$s18ScreenPreventerKit0aB0C6windowACSo8UIWindowCSg_tcfc",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "initial",
+            "printedName": "initial(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C7initial4withySo6UIViewCSg_tFZ",
+            "mangledName": "$s18ScreenPreventerKit0aB0C7initial4withySo6UIViewCSg_tFZ",
+            "moduleName": "ScreenPreventerKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenshot",
+            "printedName": "enabledPreventScreenshot(text:image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C24enabledPreventScreenshot4text5imageySSSg_AGtF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C24enabledPreventScreenshot4text5imageySSSg_AGtF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenRecording",
+            "printedName": "enabledPreventScreenRecording(text:image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C014enabledPreventA9Recording4text5imageySSSg_AGtF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C014enabledPreventA9Recording4text5imageySSSg_AGtF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enablePreventScreenshot",
+            "printedName": "enablePreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C23enablePreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C23enablePreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disablePreventScreenshot",
+            "printedName": "disablePreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C24disablePreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C24disablePreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disablePreventScreenRecording",
+            "printedName": "disablePreventScreenRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C014disablePreventA9RecordingyyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C014disablePreventA9RecordingyyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledBlurScreen",
+            "printedName": "enabledBlurScreen(style:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Style",
+                "printedName": "UIKit.UIBlurEffect.Style",
+                "usr": "c:@E@UIBlurEffectStyle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C011enabledBlurA05styleySo17UIBlurEffectStyleV_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C011enabledBlurA05styleySo17UIBlurEffectStyleV_tF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBlurScreen",
+            "printedName": "disableBlurScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C011disableBlurA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C011disableBlurA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledColorScreen",
+            "printedName": "enabledColorScreen(hexColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C012enabledColorA003hexE0ySS_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C012enabledColorA003hexE0ySS_tF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableColorScreen",
+            "printedName": "disableColorScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C012disableColorA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C012disableColorA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledImageScreen",
+            "printedName": "enabledImageScreen(named:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C012enabledImageA05namedySS_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C012enabledImageA05namedySS_tF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableImageScreen",
+            "printedName": "disableImageScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C012disableImageA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C012disableImageA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeObserver",
+            "printedName": "removeObserver(observer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ObjectiveC.NSObjectProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObjectProtocol",
+                    "printedName": "any ObjectiveC.NSObjectProtocol",
+                    "usr": "c:objc(pl)NSObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C14removeObserver8observerySo8NSObject_pSg_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C14removeObserver8observerySo8NSObject_pSg_tF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeScreenshotObserver",
+            "printedName": "removeScreenshotObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C24removeScreenshotObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C24removeScreenshotObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeScreenRecordObserver",
+            "printedName": "removeScreenRecordObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C06removeA14RecordObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C06removeA14RecordObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAllObserver",
+            "printedName": "removeAllObserver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C17removeAllObserveryyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C17removeAllObserveryyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "screenshotObserver",
+            "printedName": "screenshotObserver(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C18screenshotObserver5usingyyyc_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C18screenshotObserver5usingyyyc_tF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "screenRecordObserver",
+            "printedName": "screenRecordObserver(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C20screenRecordObserver5usingyySbc_tF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C20screenRecordObserver5usingyySbc_tF",
+            "moduleName": "ScreenPreventerKit",
+            "intro_iOS": "11.0",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "screenIsRecording",
+            "printedName": "screenIsRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C17screenIsRecordingSbyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C17screenIsRecordingSbyF",
+            "moduleName": "ScreenPreventerKit",
+            "intro_iOS": "11.0",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledBlurScreen",
+            "printedName": "enabledBlurScreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C011enabledBlurA0yyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C011enabledBlurA0yyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenshot",
+            "printedName": "enabledPreventScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C24enabledPreventScreenshotyyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C24enabledPreventScreenshotyyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enabledPreventScreenRecording",
+            "printedName": "enabledPreventScreenRecording()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C014enabledPreventA9RecordingyyF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C014enabledPreventA9RecordingyyF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setRootViewResolver",
+            "printedName": "setRootViewResolver(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenPreventerRootViewResolving",
+                "printedName": "any ScreenPreventerKit.ScreenPreventerRootViewResolving",
+                "usr": "s:18ScreenPreventerKit0aB17RootViewResolvingP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18ScreenPreventerKit0aB0C19setRootViewResolveryyAA0abeF9Resolving_pF",
+            "mangledName": "$s18ScreenPreventerKit0aB0C19setRootViewResolveryyAA0abeF9Resolving_pF",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18ScreenPreventerKit0aB0C",
+        "mangledName": "$s18ScreenPreventerKit0aB0C",
+        "moduleName": "ScreenPreventerKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ScreenPreventable",
+            "printedName": "ScreenPreventable",
+            "usr": "s:18ScreenPreventerKit0A11PreventableP",
+            "mangledName": "$s18ScreenPreventerKit0A11PreventableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hexString:alpha:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC18ScreenPreventerKitE9hexString5alphaABSS_14CoreFoundation7CGFloatVtcfc",
+            "mangledName": "$sSo7UIColorC18ScreenPreventerKitE9hexString5alphaABSS_12CoreGraphics7CGFloatVtcfc",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "Convenience"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hexa:alpha:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "hasDefaultArg": true,
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC18ScreenPreventerKitE4hexa5alphaABSu_14CoreFoundation7CGFloatVtcfc",
+            "mangledName": "$sSo7UIColorC18ScreenPreventerKitE4hexa5alphaABSu_12CoreGraphics7CGFloatVtcfc",
+            "moduleName": "ScreenPreventerKit",
+            "declAttributes": [
+              "Convenience"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Extensions\/UIColor+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 184,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Extensions\/UIColor+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 333,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "Array",
+      "offset": 363,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "Array",
+      "offset": 426,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "Array",
+      "offset": 543,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 614,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 651,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 681,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 7,
+      "value": "\"SP001\""
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1585,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotProtectionOverlay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 450,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotProtectionOverlay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1019,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Screenshot\/ScreenshotProtectionOverlay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1093,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Store\/ScreenPreventerStore.swift",
+      "kind": "Array",
+      "offset": 447,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Store\/ScreenPreventerStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 518,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Store\/ScreenPreventerStore.swift",
+      "kind": "StringLiteral",
+      "offset": 554,
+      "length": 7,
+      "value": "\"SP002\""
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/Utility\/LogConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 131,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2159,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2215,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventer.swift",
+      "kind": "StringLiteral",
+      "offset": 2252,
+      "length": 7,
+      "value": "\"SP003\""
+    },
+    {
+      "filePath": "\/Users\/inteniquetic\/Development\/iOS\/New\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventerKit\/ScreenPreventer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12014,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

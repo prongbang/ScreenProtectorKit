@@ -6,72 +6,75 @@
 //
 
 import UIKit
+import ScreenPreventerKit
 
-//  How to used:
-//
-//  @UIApplicationMain
-//  @objc class AppDelegate: FlutterAppDelegate {
-//
-//      private lazy var screenProtectorKit = { return ScreenProtectorKit(window: window) }()
-//
-//  }
-public class ScreenProtectorKit {
-    
+public protocol ScreenProtectorRootViewResolving {
+    func resolveRootView() -> UIView?
+}
+
+public enum ScreenProtectorMode: Equatable {
+    case none
+    case blur
+    case image(name: String)
+    case color(hex: String)
+}
+
+public protocol ScreenProtectable {
+    func screenIsRecording() -> Bool
+    func screenRecordObserver(using onScreenRecord: @escaping (Bool) -> Void)
+    func screenshotObserver(using onScreenshot: @escaping () -> Void)
+    func removeAllObserver()
+    func removeScreenRecordObserver()
+    func removeScreenshotObserver()
+    func removeObserver(observer: (any NSObjectProtocol)?)
+    func disableImageScreen()
+    func enabledImageScreen(named: String)
+    func disableColorScreen()
+    func enabledColorScreen(hexColor: String)
+    func disableBlurScreen()
+    func enabledBlurScreen(style: UIBlurEffect.Style)
+    func disablePreventScreenRecording()
+    func disablePreventScreenshot()
+    func enablePreventScreenshot()
+    func enabledPreventScreenRecording(text: String?, image: String?)
+    func enabledPreventScreenshot(text: String?, image: String?)
+    func enabledBlurScreen()
+    func enabledPreventScreenshot()
+    func enabledPreventScreenRecording()
+    func setRootViewResolver(_ resolver: ScreenProtectorRootViewResolving)
+    func setWindow(_ window: UIWindow?)
+}
+
+public class ScreenProtectorKit: ScreenProtectable {
     public var window: UIWindow? = nil
-    private var screenImage: UIImageView? = nil
-    private var screenBlur: UIView? = nil
-    private var screenColor: UIView? = nil
-    private var screenPrevent = UITextField()
-    private var screenshotObserve: NSObjectProtocol? = nil
-    private var screenRecordObserve: NSObjectProtocol? = nil
+    private let screenPreventer: ScreenPreventer
     
-    public init(window: UIWindow?) {
+    public init(window: UIWindow? = nil) {
+        self.window = window
+        screenPreventer = ScreenPreventer(window: window)
+    }
+    
+    public static func initial(with view: UIView?) {
+        ScreenPreventer.initial(with: view)
+    }
+    
+    public func setWindow(_ window: UIWindow?) {
         self.window = window
     }
     
-    //  How to used:
-    //
-    //  override func application(
-    //      _ application: UIApplication,
-    //      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    //  ) -> Bool {
-    //
-    //      screenProtectorKit.configurePreventionScreenshot()
-    //
-    //      return true
-    //  }
-    public func configurePreventionScreenshot() {
-        guard let w = window else { return }
-        
-        if (!w.subviews.contains(screenPrevent)) {
-            w.addSubview(screenPrevent)
-            screenPrevent.centerYAnchor.constraint(equalTo: w.centerYAnchor).isActive = true
-            screenPrevent.centerXAnchor.constraint(equalTo: w.centerXAnchor).isActive = true
-            w.layer.superlayer?.addSublayer(screenPrevent.layer)
-            if #available(iOS 17.0, *) {
-                screenPrevent.layer.sublayers?.last?.addSublayer(w.layer)
-            } else {
-                screenPrevent.layer.sublayers?.first?.addSublayer(w.layer)
-            }
-        }
-    }
+    @available(*, deprecated, message: "This API will be removed in a future release due to crashes on some devices.")
+    public func configurePreventionScreenshot() {}
     
-    // How to used:
-    //
-    // override func applicationDidBecomeActive(_ application: UIApplication) {
-    //     screenProtectorKit.enabledPreventScreenshot()
-    // }
     public func enabledPreventScreenshot() {
-        screenPrevent.isSecureTextEntry = true
+        screenPreventer.enabledPreventScreenshot()
     }
     
-    // How to used:
-    //
-    // override func applicationWillResignActive(_ application: UIApplication) {
-    //     screenProtectorKit.disablePreventScreenshot()
-    // }
+    public func enabledPreventScreenshot(text: String?, image: String?) {
+        screenPreventer.enabledPreventScreenshot(text: text, image: image)
+    }
+    
     public func disablePreventScreenshot() {
-        screenPrevent.isSecureTextEntry = false
+        screenPreventer.disablePreventScreenshot()
     }
     
     // How to used:
@@ -79,21 +82,17 @@ public class ScreenProtectorKit {
     // override func applicationWillResignActive(_ application: UIApplication) {
     //     screenProtectorKit.enabledBlurScreen()
     // }
-    public func enabledBlurScreen(style: UIBlurEffect.Style = UIBlurEffect.Style.light) {
-        guard let w = window else { return }
-
-        if self.screenBlur == nil {
-            let blurEffect = UIBlurEffect(style: style)
-            let blurView = UIVisualEffectView(effect: blurEffect)
-            blurView.frame = w.bounds
-            blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            blurView.isUserInteractionEnabled = false
-            screenBlur = blurView
-            w.addSubview(blurView)
-        }
-
-        screenBlur?.isHidden = false
-        screenBlur?.alpha = 1.0
+    public func enabledBlurScreen() {
+        screenPreventer.enabledBlurScreen()
+    }
+    
+    // How to used:
+    //
+    // override func applicationWillResignActive(_ application: UIApplication) {
+    //     screenProtectorKit.enabledBlurScreen(style: UIBlurEffect.Style.light)
+    // }
+    public func enabledBlurScreen(style: UIBlurEffect.Style) {
+        screenPreventer.enabledBlurScreen(style: UIBlurEffect.Style.light)
     }
     
     // How to used:
@@ -102,8 +101,7 @@ public class ScreenProtectorKit {
     //     screenProtectorKit.disableBlurScreen()
     // }
     public func disableBlurScreen() {
-        screenBlur?.alpha = 0.0
-        screenBlur?.isHidden = true
+        screenPreventer.disableBlurScreen()
     }
     
     // How to used:
@@ -112,18 +110,7 @@ public class ScreenProtectorKit {
     //     screenProtectorKit.enabledColorScreen(hexColor: "#ffffff")
     // }
     public func enabledColorScreen(hexColor: String) {
-        guard let w = window else { return }
-
-        if screenColor == nil {
-            let view = UIView(frame: w.bounds)
-            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            view.backgroundColor = UIColor(hexString: hexColor)
-            screenColor = view
-            w.addSubview(view)
-        }
-
-        screenColor?.isHidden = false
-        screenColor?.alpha = 1.0
+        screenPreventer.enabledColorScreen(hexColor: hexColor)
     }
     
     // How to used:
@@ -132,8 +119,7 @@ public class ScreenProtectorKit {
     //     screenProtectorKit.disableColorScreen()
     // }
     public func disableColorScreen() {
-        screenColor?.isHidden = true
-        screenColor?.alpha = 0.0
+        screenPreventer.disableColorScreen()
     }
     
     // How to used:
@@ -142,21 +128,7 @@ public class ScreenProtectorKit {
     //     screenProtectorKit.enabledImageScreen(named: "LaunchImage")
     // }
     public func enabledImageScreen(named: String) {
-        guard let w = window else { return }
-
-        if screenImage == nil {
-            let imageView = UIImageView(frame: w.bounds)
-            imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            imageView.image = UIImage(named: named)
-            imageView.isUserInteractionEnabled = false
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-            screenImage = imageView
-            w.addSubview(imageView)
-        }
-
-        screenImage?.isHidden = false
-        screenImage?.alpha = 1.0
+        screenPreventer.enabledImageScreen(named: named)
     }
     
     // How to used:
@@ -165,44 +137,35 @@ public class ScreenProtectorKit {
     //     screenProtectorKit.disableImageScreen()
     // }
     public func disableImageScreen() {
-        screenImage?.isHidden = true
-        screenImage?.alpha = 0.0
+        screenPreventer.disableImageScreen()
     }
     
     // How to used:
     //
     // screenProtectorKit.removeObserver(observer: screenRecordObserve)
     public func removeObserver(observer: NSObjectProtocol?) {
-        guard let obs = observer else {return}
-        NotificationCenter.default.removeObserver(obs)
+        screenPreventer.removeObserver(observer: observer)
     }
     
     // How to used:
     //
     // screenProtectorKit.removeScreenshotObserver()
     public func removeScreenshotObserver() {
-        if screenshotObserve != nil {
-            self.removeObserver(observer: screenshotObserve)
-            self.screenshotObserve = nil
-        }
+        screenPreventer.removeScreenshotObserver()
     }
     
     // How to used:
     //
     // screenProtectorKit.removeScreenRecordObserver()
     public func removeScreenRecordObserver() {
-        if screenRecordObserve != nil {
-            self.removeObserver(observer: screenRecordObserve)
-            self.screenRecordObserve = nil
-        }
+        screenPreventer.removeScreenRecordObserver()
     }
     
     // How to used:
     //
     // screenProtectorKit.removeAllObserver()
     public func removeAllObserver() {
-        self.removeScreenshotObserver()
-        self.removeScreenRecordObserver()
+        screenPreventer.removeAllObserver()
     }
     
     // How to used:
@@ -211,13 +174,7 @@ public class ScreenProtectorKit {
     //      // Callback on Screenshot
     // }
     public func screenshotObserver(using onScreenshot: @escaping () -> Void) {
-        screenshotObserve = NotificationCenter.default.addObserver(
-            forName: UIApplication.userDidTakeScreenshotNotification,
-            object: nil,
-            queue: OperationQueue.main
-        ) { notification in
-            onScreenshot()
-        }
+        screenPreventer.screenshotObserver(using: onScreenshot)
     }
     
     // How to used:
@@ -229,24 +186,45 @@ public class ScreenProtectorKit {
     // }
     @available(iOS 11.0, *)
     public func screenRecordObserver(using onScreenRecord: @escaping (Bool) -> Void) {
-        screenRecordObserve =
-        NotificationCenter.default.addObserver(
-            forName: UIScreen.capturedDidChangeNotification,
-            object: nil,
-            queue: OperationQueue.main
-        ) { notification in
-            let isCaptured = UIScreen.main.isCaptured
-            onScreenRecord(isCaptured)
-        }
+        screenPreventer.screenRecordObserver(using: onScreenRecord)
     }
     
-    // How to used:
-    //
-    // if #available(iOS 11.0, *) {
-    //     screenProtectorKit.screenIsRecording()
-    // }
     @available(iOS 11.0, *)
     public func screenIsRecording() -> Bool {
-        return UIScreen.main.isCaptured
+        return screenPreventer.screenIsRecording()
+    }
+    
+    public func disablePreventScreenRecording() {
+        screenPreventer.disablePreventScreenRecording()
+    }
+    
+    public func enablePreventScreenshot() {
+        screenPreventer.enablePreventScreenshot()
+    }
+    
+    public func enabledPreventScreenRecording() {
+        screenPreventer.enabledPreventScreenRecording()
+    }
+    
+    public func enabledPreventScreenRecording(text: String?, image: String?) {
+        screenPreventer.enabledPreventScreenRecording(text: text, image: image)
+    }
+    
+    public func setRootViewResolver(_ resolver: ScreenProtectorRootViewResolving) {
+        screenPreventer.setRootViewResolver(
+            ClosureRootViewResolver(resolver)
+        )
+    }
+}
+
+internal struct ClosureRootViewResolver: ScreenPreventerRootViewResolving {
+    let resolver: ScreenProtectorRootViewResolving
+    
+    init(_ resolver:  ScreenProtectorRootViewResolving) {
+        self.resolver = resolver
+    }
+    
+    func resolveRootView() -> UIView? {
+        return resolver.resolveRootView()
     }
 }
