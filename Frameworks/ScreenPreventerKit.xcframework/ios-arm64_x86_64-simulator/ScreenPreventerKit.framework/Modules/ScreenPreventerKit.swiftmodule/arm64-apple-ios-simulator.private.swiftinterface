@@ -1,0 +1,96 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios12-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ScreenPreventerKit
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1)
+  convenience public init(hexa: Swift.UInt, alpha: CoreFoundation.CGFloat = 1)
+}
+public protocol ScreenPreventable {
+  func screenIsRecording() -> Swift.Bool
+  func screenRecordObserver(using onScreenRecord: @escaping (Swift.Bool) -> Swift.Void)
+  func screenshotObserver(using onScreenshot: @escaping () -> Swift.Void)
+  func removeAllObserver()
+  func removeScreenRecordObserver()
+  func removeScreenshotObserver()
+  #if compiler(>=5.3) && $NonescapableTypes
+  func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
+  #endif
+  func disableImageScreen()
+  func enabledImageScreen(named: Swift.String)
+  func disableColorScreen()
+  func enabledColorScreen(hexColor: Swift.String)
+  func disableBlurScreen()
+  func enabledBlurScreen(style: UIKit.UIBlurEffect.Style)
+  func disablePreventScreenRecording()
+  func disablePreventScreenshot()
+  func enablePreventScreenshot()
+  #if compiler(>=5.3) && $NonescapableTypes
+  func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
+  #endif
+  func enabledBlurScreen()
+  func enabledPreventScreenshot()
+  func enabledPreventScreenRecording()
+  func setRootViewResolver(_ resolver: any ScreenPreventerKit.ScreenPreventerRootViewResolving)
+}
+public protocol ScreenPreventerRootViewResolving {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func resolveRootView() -> UIKit.UIView?
+  #endif
+}
+public enum ScreenPreventerMode : Swift.Equatable {
+  case none
+  case blur
+  case image(name: Swift.String)
+  case color(hex: Swift.String)
+  public static func == (a: ScreenPreventerKit.ScreenPreventerMode, b: ScreenPreventerKit.ScreenPreventerMode) -> Swift.Bool
+}
+public class ScreenPreventer : ScreenPreventerKit.ScreenPreventable {
+  public var window: UIKit.UIWindow?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(window: UIKit.UIWindow? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func initial(with view: UIKit.UIView?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
+  #endif
+  public func enablePreventScreenshot()
+  public func disablePreventScreenshot()
+  public func disablePreventScreenRecording()
+  public func enabledBlurScreen(style: UIKit.UIBlurEffect.Style)
+  public func disableBlurScreen()
+  public func enabledColorScreen(hexColor: Swift.String)
+  public func disableColorScreen()
+  public func enabledImageScreen(named: Swift.String)
+  public func disableImageScreen()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
+  #endif
+  public func removeScreenshotObserver()
+  public func removeScreenRecordObserver()
+  public func removeAllObserver()
+  public func screenshotObserver(using onScreenshot: @escaping () -> Swift.Void)
+  @available(iOS 11.0, *)
+  public func screenRecordObserver(using onScreenRecord: @escaping (Swift.Bool) -> Swift.Void)
+  @available(iOS 11.0, *)
+  public func screenIsRecording() -> Swift.Bool
+  public func enabledBlurScreen()
+  public func enabledPreventScreenshot()
+  public func enabledPreventScreenRecording()
+  public func setRootViewResolver(_ resolver: any ScreenPreventerKit.ScreenPreventerRootViewResolving)
+  @objc deinit
+}
