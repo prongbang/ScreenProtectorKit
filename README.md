@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ScreenProtectorKit.svg)](https://cocoapods.org/pods/ScreenProtectorKit)
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
 
 > Secure your iOS app's sensitive data by preventing screenshots and protecting background app snapshots with ease.
 
