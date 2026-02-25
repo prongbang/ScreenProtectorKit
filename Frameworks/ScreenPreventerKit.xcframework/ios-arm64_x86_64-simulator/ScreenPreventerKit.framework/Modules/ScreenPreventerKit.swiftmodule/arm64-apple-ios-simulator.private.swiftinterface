@@ -19,7 +19,7 @@ public protocol ScreenPreventable {
   func removeAllObserver()
   func removeScreenRecordObserver()
   func removeScreenshotObserver()
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
   #endif
   func disableImageScreen()
@@ -31,10 +31,10 @@ public protocol ScreenPreventable {
   func disablePreventScreenRecording()
   func disablePreventScreenshot()
   func enablePreventScreenshot()
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
   #endif
   func enabledBlurScreen()
@@ -43,7 +43,7 @@ public protocol ScreenPreventable {
   func setRootViewResolver(_ resolver: any ScreenPreventerKit.ScreenPreventerRootViewResolving)
 }
 public protocol ScreenPreventerRootViewResolving {
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   func resolveRootView() -> UIKit.UIView?
   #endif
 }
@@ -56,16 +56,16 @@ public enum ScreenPreventerMode : Swift.Equatable {
 }
 public class ScreenPreventer : ScreenPreventerKit.ScreenPreventable {
   public var window: UIKit.UIWindow?
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   public init(window: UIKit.UIWindow? = nil)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   public static func initial(with view: UIKit.UIView?)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   public func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   public func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
   #endif
   public func enablePreventScreenshot()
@@ -77,7 +77,7 @@ public class ScreenPreventer : ScreenPreventerKit.ScreenPreventable {
   public func disableColorScreen()
   public func enabledImageScreen(named: Swift.String)
   public func disableImageScreen()
-  #if compiler(>=5.3) && $NonescapableTypes
+  #if true
   public func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
   #endif
   public func removeScreenshotObserver()
