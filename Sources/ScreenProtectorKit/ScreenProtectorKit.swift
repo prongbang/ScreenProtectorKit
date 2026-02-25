@@ -226,7 +226,7 @@ public class ScreenProtectorKit: ScreenProtectable {
             DispatchQueue.main.async {
                 let windows = UIApplication.shared.windows
                 for window in windows {
-                    self.applyOverrideUserInterfaceStyle(to: window)
+                    ScreenProtectorKit.applyOverrideUserInterfaceStyle(to: window)
                 }
             }
         }
@@ -234,7 +234,7 @@ public class ScreenProtectorKit: ScreenProtectable {
     
     @available(iOS 13.0, *)
     @MainActor
-    private func applyOverrideUserInterfaceStyle(to view: UIView) {
+    private static func applyOverrideUserInterfaceStyle(to view: UIView) {
         if let textField = view as? UITextField, textField.isSecureTextEntry {
             textField.overrideUserInterfaceStyle = .light
         }
