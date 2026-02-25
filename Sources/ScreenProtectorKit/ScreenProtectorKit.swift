@@ -233,6 +233,7 @@ public class ScreenProtectorKit: ScreenProtectable {
     }
     
     @available(iOS 13.0, *)
+    @MainActor
     private func applyOverrideUserInterfaceStyle(to view: UIView) {
         if let textField = view as? UITextField, textField.isSecureTextEntry {
             textField.overrideUserInterfaceStyle = .light
