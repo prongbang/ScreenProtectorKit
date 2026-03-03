@@ -67,10 +67,12 @@ public class ScreenProtectorKit: ScreenProtectable {
     
     public func enabledPreventScreenshot() {
         screenPreventer.enabledPreventScreenshot()
+        preventIOS16Crash()
     }
     
     public func enabledPreventScreenshot(text: String?, image: String?) {
         screenPreventer.enabledPreventScreenshot(text: text, image: image)
+        preventIOS16Crash()
     }
     
     public func disablePreventScreenshot() {
@@ -200,20 +202,45 @@ public class ScreenProtectorKit: ScreenProtectable {
     
     public func enablePreventScreenshot() {
         screenPreventer.enablePreventScreenshot()
+        preventIOS16Crash()
     }
     
     public func enabledPreventScreenRecording() {
         screenPreventer.enabledPreventScreenRecording()
+        preventIOS16Crash()
     }
     
     public func enabledPreventScreenRecording(text: String?, image: String?) {
         screenPreventer.enabledPreventScreenRecording(text: text, image: image)
+        preventIOS16Crash()
     }
     
     public func setRootViewResolver(_ resolver: ScreenProtectorRootViewResolving) {
         screenPreventer.setRootViewResolver(
             ClosureRootViewResolver(resolver)
         )
+    }
+
+    private func preventIOS16Crash() {
+        if #available(iOS 16.0, *) {
+            DispatchQueue.main.async {
+                let windows = UIApplication.shared.windows
+                for window in windows {
+                    ScreenProtectorKit.applyOverrideUserInterfaceStyle(to: window)
+                }
+            }
+        }
+    }
+    
+    @available(iOS 13.0, *)
+    @MainActor
+    private static func applyOverrideUserInterfaceStyle(to view: UIView) {
+        if let textField = view as? UITextField, textField.isSecureTextEntry {
+            textField.overrideUserInterfaceStyle = .light
+        }
+        for subview in view.subviews {
+            applyOverrideUserInterfaceStyle(to: subview)
+        }
     }
 }
 
