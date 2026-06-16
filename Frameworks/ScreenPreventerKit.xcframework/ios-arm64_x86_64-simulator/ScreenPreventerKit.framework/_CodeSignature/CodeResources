@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/ScreenPreventerKit-Swift.h</key>
+		<data>
+		ch0zyIM+U1j49djqfCowTk56VEU=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		gVZdKfz/RZWrmkxwCht0+lwOCmY=
+		UafNZMVZr8ESYVWyPwCHSomMbGM=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		mPBDYCEh6xfFtYrA4L7b+9/eUUk=
+		p67NY8M7mb0ZVfckSgwBmAmK+YQ=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TJ3tELIp1Z1nFt+94JFgjGA46ko=
+		kMz40QDEjbGLlYFzJs3MtiGwvfo=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,19 +26,19 @@
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TJ3tELIp1Z1nFt+94JFgjGA46ko=
+		kMz40QDEjbGLlYFzJs3MtiGwvfo=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1LgLIIO9cM/OYBm8Gx0XSQt9ASU=
+		wtpK0fihI6xx/GukStezmJJbfBE=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		mPBDYCEh6xfFtYrA4L7b+9/eUUk=
+		p67NY8M7mb0ZVfckSgwBmAmK+YQ=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Ey6qPbZRJ5v+MOcTW50VnlueR6A=
+		eaP2x+BW/HeOlscNJ1XHeth2wW8=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,27 +46,38 @@
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Ey6qPbZRJ5v+MOcTW50VnlueR6A=
+		eaP2x+BW/HeOlscNJ1XHeth2wW8=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		feD2fTOnV02smhtvrw0GVgWkXmg=
+		8vOl4g50MSdlPU6ykkBQkeRVzNE=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		3XoCbqz5XYLQ6U9sj0ZomhEjOYg=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/ScreenPreventerKit-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Iov1xC3BBrrUQIMMEB8X7+OfRwzExPGgAk5PQp8rCoY=
+			</data>
+		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LkQnaRrQCNOiXwdr1tmD22CYcFzHoE33HaijFtS2qAQ=
+			A5672GKv/vf+R08boCPY3/jED2JOZfDAxksEdNDe5ZM=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KYR/sG0ElZRW/bDJ5byW4PAg8ecwU+gVq8t1t7YxLQg=
+			nQjOVzH6OY+ZIa40IOErRTqAzcITQq+e9F71cidcmVA=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -76,28 +91,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KYR/sG0ElZRW/bDJ5byW4PAg8ecwU+gVq8t1t7YxLQg=
+			nQjOVzH6OY+ZIa40IOErRTqAzcITQq+e9F71cidcmVA=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eTg/PIqGwlGrSJP+eMMxfZuaW1LGEkSMF8HOlXP/abM=
+			KFOXeVptk6iU+c3cZWK4kqLBu56loA0BIxrBIfhr6uE=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LkQnaRrQCNOiXwdr1tmD22CYcFzHoE33HaijFtS2qAQ=
+			A5672GKv/vf+R08boCPY3/jED2JOZfDAxksEdNDe5ZM=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xMS3wZgiCPqjFmchz5DaeE0A2WviTT9kvFMh+IV5qL0=
+			O2ZubCvJauXODlEvyewzlGATER0iP6reh2pwSAE1LTs=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -111,14 +126,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xMS3wZgiCPqjFmchz5DaeE0A2WviTT9kvFMh+IV5qL0=
+			O2ZubCvJauXODlEvyewzlGATER0iP6reh2pwSAE1LTs=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gILwTyFOp7cqYoFXj571R/h3jZaIhiCvOkwfNC4U6D8=
+			WsPhWbnL9QLPSTgIxJF3A26OUrzWodI40saBOH54Seo=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9BuXAh1HNl8Hzf44IDHhMHTRs7qqfdNbF8GqD54umpM=
 			</data>
 		</dict>
 	</dict>

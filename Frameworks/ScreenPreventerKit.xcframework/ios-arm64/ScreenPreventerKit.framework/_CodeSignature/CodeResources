@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/ScreenPreventerKit-Swift.h</key>
+		<data>
+		B64rCtHVprpSLc3wx10m7eoIOhU=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		f8L08cR5pGrqy4nGO54eu4Ex3+4=
+		CJ+53FuBJFCIgGMeqblwQ3On1as=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		mPBDYCEh6xfFtYrA4L7b+9/eUUk=
+		p67NY8M7mb0ZVfckSgwBmAmK+YQ=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		VDUUj4DNlUfuQ/aGpe+C2omQRuE=
+		27c492Pt9lHycjesIxTJXTeLNkY=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,27 +26,38 @@
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		VDUUj4DNlUfuQ/aGpe+C2omQRuE=
+		27c492Pt9lHycjesIxTJXTeLNkY=
 		</data>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		p0Kva+nBqJzhNyAVH/qzMc25OXA=
+		TUihDbIVeQtNZOUy8EPPhBDE40I=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		3XoCbqz5XYLQ6U9sj0ZomhEjOYg=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/ScreenPreventerKit-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cR81bznyMWkehQOtsFi/N50gX7fXrF896znb5VD4OuU=
+			</data>
+		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LkQnaRrQCNOiXwdr1tmD22CYcFzHoE33HaijFtS2qAQ=
+			A5672GKv/vf+R08boCPY3/jED2JOZfDAxksEdNDe5ZM=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8VYIVyBDQP3vamxKKH2end9sIrNtAfs7JRDE/vCTPcs=
+			iSxH2pnWP2yFBniHmC+mg0E6GXn/wY9MmyPfsb0iScY=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -56,14 +71,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8VYIVyBDQP3vamxKKH2end9sIrNtAfs7JRDE/vCTPcs=
+			iSxH2pnWP2yFBniHmC+mg0E6GXn/wY9MmyPfsb0iScY=
 			</data>
 		</dict>
 		<key>Modules/ScreenPreventerKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VSMdSGXOxRm2N2ly0krbgeLb7jP1s/IxCk7+BJDalfg=
+			c9yNrS1NiMgu1UTxXjg0mKKWshQG1FiLhotY5AeJde0=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9BuXAh1HNl8Hzf44IDHhMHTRs7qqfdNbF8GqD54umpM=
 			</data>
 		</dict>
 	</dict>

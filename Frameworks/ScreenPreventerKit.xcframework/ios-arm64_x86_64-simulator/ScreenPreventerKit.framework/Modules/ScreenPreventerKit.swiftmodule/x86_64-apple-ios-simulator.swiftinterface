@@ -1,9 +1,10 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target x86_64-apple-ios12-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ScreenPreventerKit
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import Foundation
 import Swift
+import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -12,6 +13,33 @@ extension UIKit.UIColor {
   convenience public init(hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1)
   convenience public init(hexa: Swift.UInt, alpha: CoreFoundation.CGFloat = 1)
 }
+@available(iOS 13.0, *)
+extension ScreenPreventerKit.ScreenPreventer {
+  public func protectedView<Content>(isProtected: Swift.Bool, @SwiftUICore.ViewBuilder content: @escaping () -> Content) -> some SwiftUICore.View where Content : SwiftUICore.View
+  
+}
+@available(iOS 13.0, *)
+@_Concurrency.MainActor @preconcurrency public struct ScreenPreventerProtectedHostingView<Content> : SwiftUI.UIViewControllerRepresentable where Content : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(isProtected: Swift.Bool, protectionOwner: Swift.AnyObject? = nil, setWindow: @escaping (UIKit.UIWindow?) -> Swift.Void, enableProtection: @escaping (UIKit.UIView) -> Swift.Bool, disableProtection: @escaping (UIKit.UIView) -> Swift.Bool, @SwiftUICore.ViewBuilder content: @escaping () -> Content)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: ScreenPreventerKit.ScreenPreventerProtectedHostingView<Content>.Context) -> ScreenPreventerKit.ScreenPreventerProtectedHostingController<Content>
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: ScreenPreventerKit.ScreenPreventerProtectedHostingController<Content>, context: ScreenPreventerKit.ScreenPreventerProtectedHostingView<Content>.Context)
+  @available(iOS 13.0, *)
+  public typealias Body = Swift.Never
+  @available(iOS 13.0, *)
+  public typealias Coordinator = Swift.Void
+  @available(iOS 13.0, *)
+  public typealias UIViewControllerType = ScreenPreventerKit.ScreenPreventerProtectedHostingController<Content>
+}
+@_hasMissingDesignatedInitializers @available(iOS 13.0, *)
+@_Concurrency.MainActor @preconcurrency final public class ScreenPreventerProtectedHostingController<Content> : UIKit.UIViewController where Content : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+}
 public protocol ScreenPreventable {
   func screenIsRecording() -> Swift.Bool
   func screenRecordObserver(using onScreenRecord: @escaping (Swift.Bool) -> Swift.Void)
@@ -19,7 +47,7 @@ public protocol ScreenPreventable {
   func removeAllObserver()
   func removeScreenRecordObserver()
   func removeScreenshotObserver()
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
   #endif
   func disableImageScreen()
@@ -30,20 +58,29 @@ public protocol ScreenPreventable {
   func enabledBlurScreen(style: UIKit.UIBlurEffect.Style)
   func disablePreventScreenRecording()
   func disablePreventScreenshot()
+  @discardableResult
+  func disablePreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
   func enablePreventScreenshot()
-  #if true
+  @discardableResult
+  func enablePreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
   #endif
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
   #endif
+  @discardableResult
+  func enabledPreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
   func enabledBlurScreen()
   func enabledPreventScreenshot()
   func enabledPreventScreenRecording()
+  @discardableResult
+  func suspendPreventScreenshotProtection() -> Swift.Bool
+  func resumePreventScreenshotProtection()
   func setRootViewResolver(_ resolver: any ScreenPreventerKit.ScreenPreventerRootViewResolving)
 }
 public protocol ScreenPreventerRootViewResolving {
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   func resolveRootView() -> UIKit.UIView?
   #endif
 }
@@ -56,28 +93,38 @@ public enum ScreenPreventerMode : Swift.Equatable {
 }
 public class ScreenPreventer : ScreenPreventerKit.ScreenPreventable {
   public var window: UIKit.UIWindow?
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(window: UIKit.UIWindow? = nil)
   #endif
-  #if true
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func initial(with view: UIKit.UIView?)
   #endif
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   public func enabledPreventScreenshot(text: Swift.String?, image: Swift.String?)
   #endif
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   public func enabledPreventScreenRecording(text: Swift.String?, image: Swift.String?)
   #endif
   public func enablePreventScreenshot()
   public func disablePreventScreenshot()
+  @discardableResult
+  public func enablePreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
+  @discardableResult
+  public func enabledPreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
+  @discardableResult
+  public func disablePreventScreenshot(for view: UIKit.UIView) -> Swift.Bool
   public func disablePreventScreenRecording()
+  @discardableResult
+  public func suspendPreventScreenshotProtection() -> Swift.Bool
+  public func resumePreventScreenshotProtection()
   public func enabledBlurScreen(style: UIKit.UIBlurEffect.Style)
   public func disableBlurScreen()
   public func enabledColorScreen(hexColor: Swift.String)
   public func disableColorScreen()
   public func enabledImageScreen(named: Swift.String)
   public func disableImageScreen()
-  #if true
+  #if compiler(>=5.3) && $NonescapableTypes
   public func removeObserver(observer: (any ObjectiveC.NSObjectProtocol)?)
   #endif
   public func removeScreenshotObserver()
@@ -92,5 +139,6 @@ public class ScreenPreventer : ScreenPreventerKit.ScreenPreventable {
   public func enabledPreventScreenshot()
   public func enabledPreventScreenRecording()
   public func setRootViewResolver(_ resolver: any ScreenPreventerKit.ScreenPreventerRootViewResolving)
-  @objc deinit
 }
+@available(iOS 13.0, *)
+extension ScreenPreventerKit.ScreenPreventerProtectedHostingView : Swift.Sendable {}

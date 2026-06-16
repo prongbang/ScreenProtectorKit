@@ -1,0 +1,4 @@
+framework module ScreenPreventerKit {
+  header "ScreenPreventerKit-Swift.h"
+  requires objc
+}
