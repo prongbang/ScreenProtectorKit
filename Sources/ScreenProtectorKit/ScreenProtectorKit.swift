@@ -280,6 +280,21 @@ public class ScreenProtectorKit: NSObject, ScreenProtectable {
     @objc
     public func enabledPreventScreenshot() {
         performOnMain {
+            // Keep Flutter's root view sized when screenshot protection restores it to its container.
+            if case .disabled = screenshotProtectionConfiguration,
+               let flutterControllerClass = NSClassFromString("FlutterViewController"),
+               let controller = window?.rootViewController,
+               controller.isKind(of: flutterControllerClass),
+               let view = controller.viewIfLoaded, view.translatesAutoresizingMaskIntoConstraints,
+               let container = view.superview {
+                view.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+                    view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+                    view.topAnchor.constraint(equalTo: container.topAnchor),
+                    view.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+                ])
+            }
             isScreenshotProtectionSuspended = false
             screenshotProtectionConfiguration = .enabled(text: nil, image: nil)
             screenPreventer.enabledPreventScreenshot()
