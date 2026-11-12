@@ -3,8 +3,32 @@ import XCTest
 import ScreenPreventerKit
 @testable import ScreenProtectorKit
 
+@objc(FlutterViewController)
+private final class TestFlutterViewController: UIViewController {}
+
 @MainActor
 final class ScreenProtectorKitTests: XCTestCase {
+    func testEnablingScreenshotProtectionKeepsFlutterRootViewSizedToItsContainer() {
+        let window = UIWindow()
+        let controller = TestFlutterViewController()
+        window.rootViewController = controller
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+        container.addSubview(controller.view)
+        let kit = ScreenProtectorKit(
+            window: window,
+            screenPreventer: ScreenPreventerSpy(),
+            initializeScreenPreventer: { _ in },
+            notificationCenter: NotificationCenter()
+        )
+
+        kit.enabledPreventScreenshot()
+        container.frame.size = CGSize(width: 480, height: 320)
+        container.layoutIfNeeded()
+
+        XCTAssertFalse(controller.view.translatesAutoresizingMaskIntoConstraints)
+        XCTAssertEqual(controller.view.frame, container.bounds)
+    }
+
     func testWindowMutationSynchronizesUnderlyingPreventerAndReappliesScreenshotProtection() {
         let notificationCenter = NotificationCenter()
         let screenPreventer = ScreenPreventerSpy()
